@@ -14,6 +14,8 @@
     <modules>
         <module>common-api</module>
         <module>eureka-server</module>
+        <module>eureka-server-9001</module>
+        <module>eureka-server-9002</module>
         <module>goods-server</module>
         <module>order-server</module>
     </modules>

@@ -29,7 +29,8 @@ public class RestConfiguration {
         // 5) RetryRule：先按照 RoundRobinRule 策略获取服务，如果获取服务失败则在指定时间内进行重试，获取可用服务；
         // 6) BestAvailableRule：先过滤由于多次访问故障而处于断路器跳闸状态的服务，然后选择并发量最小的服务；
         // 7) ZoneAvoidanceRule：判断 server 所在区域的性能和 server 的可用性来选择服务器。
-        return new RandomRule();
+        // return new RandomRule();
+        return new RoundRobinRule();
     }
 
 }

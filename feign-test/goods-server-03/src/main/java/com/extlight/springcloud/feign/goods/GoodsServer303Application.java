@@ -1,4 +1,4 @@
-package com.extlight.springcloud.feign.order;
+package com.extlight.springcloud.feign.goods;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -10,9 +10,9 @@ import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
  */
 @EnableEurekaClient
 @SpringBootApplication
-public class OrderServerApplication {
+public class GoodsServer303Application {
 
     public static void main(String[] args) {
-        SpringApplication.run(OrderServerApplication.class, args);
+        SpringApplication.run(GoodsServer303Application.class, args);
     }
 }

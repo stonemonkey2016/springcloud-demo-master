@@ -18,6 +18,7 @@ public class OrderController {
 	@RequestMapping("/place")
 	public Result placeOrder(Order order) throws Exception {
 		// http://127.0.0.1:8100/order/place?goodsId=1
+		// http://order:8100/order/place?goodsId=1
 		this.orderService.placeOrder(order);
 		return Result.success();
 	}

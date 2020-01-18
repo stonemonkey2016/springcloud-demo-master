@@ -1,0 +1,35 @@
+server:
+  port: 10000
+
+spring:
+  application:
+    name: CONFIG
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/stonemonkey2016/spring-cloud-config.git
+          username: stonemonkey2016
+          password: King27001
+          basedir: D:/tab/4_GitRepository  # 本地仓库目录
+#          Spring Cloud配置服务器会复制远程git存储库，如果本地副本变得不干净(例如，通过OS进程更改文件夹内容)，那么Spring Cloud配置服务器就不能更新远程存储库中的本地副本。为了解决这个问题，有一个强制拉属性，如果本地副本是脏的，它将使Spring Cloud配置服务器从远程存储库中强制pull.
+          force-pull: true
+
+  rabbitmq:
+    host: 192.168.31.134
+    port: 5673
+    username: admin
+    password: admin
+
+eureka:
+  instance:
+      instance-id: config-api
+  client:
+      service-url:
+          defaultZone: http://localhost:9000/eureka/  # 注册中心访问地址
+          
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*" # 暴露接口
